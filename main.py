@@ -10,7 +10,7 @@ import time
 pygame.init()
 
 cardBack = pygame.image.load(os.path.join('png', 'cardBack.png'))
-resize_y = 0 # Don't resize when the program start
+
 screen = pygame.display.set_mode((0, 0), pygame.RESIZABLE)
 
 pygame.display.set_caption('Black Jack')
