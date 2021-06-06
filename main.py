@@ -5,18 +5,19 @@ import sys
 import os
 import math
 import time
-import tkinter as tk
-from tkinter import messagebox
 
-
+#https://www.youtube.com/watch?v=OXi4T58PwdM&feature=youtu.be
 pygame.init()
+
 cardBack = pygame.image.load(os.path.join('png', 'cardBack.png'))
-screen = pygame.display.set_mode((1300, 900))
+resize_y = 0 # Don't resize when the program start
+screen = pygame.display.set_mode((0, 0), pygame.RESIZABLE)
+
 pygame.display.set_caption('Black Jack')
 clock = pygame.time.Clock()
 myfont = pygame.font.SysFont('monospace', 70)
 smallFont = pygame.font.SysFont('monospace', 30)
-bg = pygame.image.load(os.path.join('back', 'background.jpg'))
+#bg = pygame.image.load(os.path.join('back', 'background.jpg'))
 screen.fill((0,128,0))
 clock = pygame.time.Clock()
 deck = casino.cards()
@@ -128,7 +129,7 @@ chips.append([five, 20, 375, 5])
 chips.append([ten, 20, 450, 10])
 chips.append([twenty, 20, 525, 20])
 
-
+#func to check and update chips
 def lost():
     screen.fill((0,128,0))
     label = myfont.render('Press any key to play again', 1, (255,255,255))
@@ -144,7 +145,7 @@ def lost():
         if ev.type == pygame.QUIT:
             pygame.quit()
 
-
+#func to place chips out of 50
 def bet():
     global betChips
     global playerChips
