@@ -1,3 +1,5 @@
+#https://www.youtube.com/watch?v=OXi4T58PwdM&feature=youtu.be
+
 import install_requirements
 import casino
 import pygame
@@ -6,7 +8,7 @@ import os
 import math
 import time
 
-#https://www.youtube.com/watch?v=OXi4T58PwdM&feature=youtu.be
+
 pygame.init()
 
 cardBack = pygame.image.load(os.path.join('png', 'cardBack.png'))
@@ -30,8 +32,7 @@ pygame.display.flip()
 onTable = []
 topCards = []
 
-cardImg = [None]
-    # Load 52 Images
+cardImg = [None] # Load 52 Images
 two_clubs = pygame.image.load(os.path.join('png', '2_of_clubs.png'))
 two_diamonds = pygame.image.load(os.path.join('png', '2_of_diamonds.png'))
 two_hearts = pygame.image.load(os.path.join('png', '2_of_hearts.png'))
@@ -129,8 +130,7 @@ chips.append([five, 20, 375, 5])
 chips.append([ten, 20, 450, 10])
 chips.append([twenty, 20, 525, 20])
 
-#func to check and update chips
-def lost():
+def lost(): #function to check and update chips
     screen.fill((0,128,0))
     label = myfont.render('Press any key to play again', 1, (255,255,255))
     label2 = myfont.render('Out of Chips...', 1, (255,255,255))
@@ -145,8 +145,8 @@ def lost():
         if ev.type == pygame.QUIT:
             pygame.quit()
 
-#func to place chips out of 50
-def bet():
+
+def bet(): #function to place chips out of 50
     global betChips
     global playerChips
     label = myfont.render('Please place your bet: ', 1, (255,255,255))
