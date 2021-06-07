@@ -1,3 +1,5 @@
+#https://www.youtube.com/watch?v=OXi4T58PwdM&feature=youtu.be
+
 import install_requirements
 import casino
 import pygame
@@ -6,7 +8,7 @@ import os
 import math
 import time
 
-#https://www.youtube.com/watch?v=OXi4T58PwdM&feature=youtu.be
+
 pygame.init()
 
 cardBack = pygame.image.load(os.path.join('png', 'cardBack.png'))
